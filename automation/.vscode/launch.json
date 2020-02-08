@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Rozetka_e2e",
+            "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
+            "args": [
+                "${workspaceRoot}/config/protractor.chrome.conf.js"
+            ],
+            "skipFiles": [
+                "node_modules/q/*",
+                "node_modules/jszip/*",
+                "node_modules/xlsx/*",
+                "node_modules/selenium-webdriver/lib/*",
+                "<node_internals>/*",
+            ],
+            "stopOnEntry": false,
+            "showAsyncStacks": true,
+            "protocol": "inspector",
+            "outputCapture": "std",
+            "console": "internalConsole"
+        },
+    ]
+}
