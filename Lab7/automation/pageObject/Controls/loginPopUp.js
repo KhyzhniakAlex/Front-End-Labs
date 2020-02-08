@@ -1,5 +1,5 @@
-const helper = require('./helper');
-const constants = require('./constants');
+const helper = require('../Helpers/helper');
+const constants = require('../Helpers/constants');
 
 class LoginPopUp {
     constructor(parentContainer) {
@@ -34,7 +34,7 @@ class LoginPopUp {
     }
 
     waitLoaded() {
-        return helper.waitLoaded(this._container, constants.timeout, 'Login form was not displayed');
+        return helper.waitIsDisplayed(this._container, constants.timeout, 'Login form was not displayed');
     }
 }
 

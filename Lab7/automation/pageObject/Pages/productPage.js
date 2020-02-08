@@ -1,5 +1,5 @@
-const helper = require('./helper');
-const constants = require('./constants');
+const helper = require('../Helpers/helper');
+const constants = require('../Helpers/constants');
 
 class ProductPage {
     constructor(parentContainer) {

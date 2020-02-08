@@ -1,6 +1,6 @@
-const helper = require('./helper');
-const constants = require('./constants');
-const CatalogMenu = require('./catalogMenu');
+const helper = require('../Helpers/helper');
+const constants = require('../Helpers/constants');
+const CatalogMenu = require('../Controls/catalogMenu');
 
 class MainPage {
     constructor(parentContainer) {

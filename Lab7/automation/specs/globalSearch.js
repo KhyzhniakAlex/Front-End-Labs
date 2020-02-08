@@ -23,6 +23,6 @@ describe('Global Search', () => {
         await itemPage.waitLoaded();
 
         const actualProductTitle = await (await itemPage.title).getText();
-        expect(actualProductTitle.includes(searchString)).toBe(true);
+        expect(actualProductTitle).toBe(searchString);
     });
 });

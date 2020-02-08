@@ -1,5 +1,6 @@
-const helper = require('./helper');
-const constants = require('./constants');
+const CartPopUp = require('../Controls/cartPopUp');
+const helper = require('../Helpers/helper');
+const constants = require('../Helpers/constants');
 
 class ItemPage {
     constructor(parentContainer) {
@@ -8,6 +9,7 @@ class ItemPage {
 
         this._productContent = by.tagName('product-tab-main');
         this._productTitle = by.className('product__title');
+        this._buyButton = by.className('buy-button');
     }
 
     get container() {
@@ -16,6 +18,15 @@ class ItemPage {
 
     get title() {
         return this._container.element(this._productTitle);
+    }
+
+    get cartPopUp() {
+        return new CartPopUp();
+    }
+
+    async addItemToCart() {
+        const buyButton = await this._container.element(this._buyButton);
+        return buyButton.click();
     }
 
     waitLoaded() {

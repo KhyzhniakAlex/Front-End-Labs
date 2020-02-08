@@ -19,7 +19,7 @@ const configCurrent = {
     },
 
     specs: [
-        '../specs/flowToItem.js',
+        '../specs/cart.js',
     ],
 
     maxSessions: 1,

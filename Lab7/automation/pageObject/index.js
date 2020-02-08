@@ -1,23 +1,21 @@
-const MainPage = require('./mainPage');
-const LoginPopUp = require('./loginPopUp');
-const ItemPage = require('./itemPage');
-const CategoryPage = require('./categoryPage');
-const ProductPage = require('./productPage');
+const MainPage = require('./Pages/mainPage');
+const ItemPage = require('./Pages/itemPage');
+const CategoryPage = require('./Pages/categoryPage');
+const ProductPage = require('./Pages/productPage');
 
-const catalogMenu = require('./catalogMenu');
+const LoginPopUp = require('./Controls/loginPopUp');
 
-const credentials = require('./credentials');
-const environments = require('./environments');
-const helper = require('./helper');
-const constants = require('./constants');
+const credentials = require('./Helpers/credentials');
+const environments = require('./Helpers/environments');
+const helper = require('./Helpers/helper');
+const constants = require('./Helpers/constants');
 
 module.exports = {
     MainPage,
-    LoginPopUp,
     ItemPage,
     CategoryPage,
     ProductPage,
-    catalogMenu,
+    LoginPopUp,
     credentials,
     environments,
     helper,
