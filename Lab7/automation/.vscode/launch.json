@@ -4,7 +4,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Rozetka_e2e",
+            "name": "Chrome",
             "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
             "args": [
                 "${workspaceRoot}/config/protractor.chrome.conf.js"

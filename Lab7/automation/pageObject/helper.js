@@ -13,10 +13,10 @@ async function openEnv(env) {
     }
 }
 
-function waitLoaded(element, timeout = 15000, errorMessage = 'Element was not loaded within timeout') {
-    return browser.wait(protractor.ExpectedConditions.presenceOf(element), timeout, errorMessage);
+function waitLoaded(element, timeout = 15000, elementName) {
+    return browser.wait(protractor.ExpectedConditions.presenceOf(element), timeout, `${elementName} was not loaded within timeout`);
 }
 
-function waitIsDisplayed(element, timeout = 15000, errorMessage = "Element didn't become visible within timeout") {
-    return browser.wait(protractor.ExpectedConditions.visibilityOf(element), timeout, errorMessage);
+function waitIsDisplayed(element, timeout = 15000, elementName) {
+    return browser.wait(protractor.ExpectedConditions.visibilityOf(element), timeout, `${elementName} didn't become visible within timeout`);
 }

@@ -4,6 +4,7 @@ const {
     credentials,
     environments,
     helper,
+    constants,
 } = require('../pageObject');
 
 describe('Login', () => {
@@ -28,6 +29,6 @@ describe('Login', () => {
         const usernameLabel = await mainPage.usernameLabel;
         const actualUserName = await usernameLabel.getText();
 
-        expect(actualUserName).toBe('Саша Хижняк');
+        expect(actualUserName).toBe(constants.userName);
     });
 });

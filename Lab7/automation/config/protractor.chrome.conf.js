@@ -19,7 +19,7 @@ const configCurrent = {
     },
 
     specs: [
-        '../specs/login.js',
+        '../specs/flowToItem.js',
     ],
 
     maxSessions: 1,
