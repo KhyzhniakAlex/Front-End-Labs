@@ -1,32 +1,26 @@
 {
-    "name": "lab7_e2e_for_Rozetka",
-    "version": "0.0.1",
-    "main": "./pageObject/index.js",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/KhyzhniakAlex/Front-End-Labs.git"
-    },
-    "license": "ISC",
-    "scripts": {
-      "driver-clean": "webdriver-manager clean",
-      "driver-update": "webdriver-manager update --versions.chrome 79.0.3945.36 --gecko false",
-      "driver-status": "webdriver-manager status"
-    },
-    "dependencies": {
-      "eslint": "~5.13.0",
-      "eslint-config-airbnb-base": "13.1.0",
-      "eslint-plugin-import": "2.14.0",
-      "eslint-teamcity": "2.1.0",
-      "jasmine-reporters": "2.3.2",
-      "jasmine-spec-reporter": "4.1.1",
-      "protractor": "5.4.2",
-      "webdriver-manager": "12.1.7",
-      "lodash": "4.17.15",
-      "jasmine-data-provider": "^2.2.0",
-      "moment": "^2.8.4",
-      "moment-range": "^4.0.2",
-      "moment-timezone": "0.5.9",
-      "inherits": "2.0.4"
-    }
+  "name": "lab7_e2e_for_Rozetka",
+  "version": "0.0.1",
+  "main": "./pageObject/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KhyzhniakAlex/Front-End-Labs.git"
+  },
+  "license": "ISC",
+  "scripts": {
+    "driver-clean": "webdriver-manager clean",
+    "driver-update": "webdriver-manager update --versions.chrome 79.0.3945.36 --gecko false",
+    "driver-status": "webdriver-manager status"
+  },
+  "dependencies": {
+    "eslint": "~5.13.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "jasmine-data-provider": "^2.2.0",
+    "jasmine-spec-reporter": "4.1.1",
+    "protractor": "5.4.2",
+    "webdriver-manager": "12.1.7",
+    "lodash": "4.17.15",
+    "inherits": "2.0.4"
   }
-  
+}
