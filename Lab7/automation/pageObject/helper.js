@@ -1,0 +1,22 @@
+module.exports = {
+    openEnv,
+    waitLoaded,
+    waitIsDisplayed,
+};
+
+async function openEnv(env) {
+    try {
+        await browser.get(env);
+        return browser.driver.manage().window().maximize();
+    } catch (err) {
+        throw new Error(`Site opening failed. ${err}`);
+    }
+}
+
+function waitLoaded(element, timeout = 15000, errorMessage = 'Element was not loaded within timeout') {
+    return browser.wait(protractor.ExpectedConditions.presenceOf(element), timeout, errorMessage);
+}
+
+function waitIsDisplayed(element, timeout = 15000, errorMessage = "Element didn't become visible within timeout") {
+    return browser.wait(protractor.ExpectedConditions.visibilityOf(element), timeout, errorMessage);
+}
