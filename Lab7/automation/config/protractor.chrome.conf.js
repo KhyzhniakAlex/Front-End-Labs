@@ -15,8 +15,16 @@ const configCurrent = {
         platform: 'ANY',
         requireWindowFocus: true,
         shardTestFiles: true,
-        maxInstances: 3,
+        maxInstances: 1,
     },
+
+    specs: [
+        // '../specs/login.js',
+        // '../specs/cart.js',
+        // '../specs/flowToItem.js',
+        // '../specs/globalSearch.js',
+        '../specs/wishedItem.js',
+    ],
 
     maxSessions: 1,
 };

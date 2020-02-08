@@ -1,5 +1,5 @@
 {
-  "name": "lab7_e2e_for_Rozetka",
+  "name": "lab7_e2e_tests",
   "version": "0.0.1",
   "main": "./pageObject/index.js",
   "repository": {
