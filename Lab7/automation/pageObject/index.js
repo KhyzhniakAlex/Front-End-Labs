@@ -2,6 +2,7 @@ const MainPage = require('./Pages/mainPage');
 const ItemPage = require('./Pages/itemPage');
 const CategoryPage = require('./Pages/categoryPage');
 const ProductPage = require('./Pages/productPage');
+const WishesPage = require('./Pages/wishesPage');
 
 const LoginPopUp = require('./Controls/loginPopUp');
 
@@ -15,6 +16,7 @@ module.exports = {
     ItemPage,
     CategoryPage,
     ProductPage,
+    WishesPage,
     LoginPopUp,
     credentials,
     environments,

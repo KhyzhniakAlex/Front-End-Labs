@@ -34,7 +34,11 @@ class LoginPopUp {
     }
 
     waitLoaded() {
-        return helper.waitIsDisplayed(this._container, constants.timeout, 'Login form was not displayed');
+        return helper.waitIsDisplayed(this._container, constants.timeout, 'Login form');
+    }
+
+    waitIsNotDisplayed() {
+        return helper.waitIsNotDisplayed(this._container, constants.timeout, 'Login form');
     }
 }
 

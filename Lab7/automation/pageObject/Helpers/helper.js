@@ -2,6 +2,7 @@ module.exports = {
     openEnv,
     waitLoaded,
     waitIsDisplayed,
+    waitIsNotDisplayed,
 };
 
 async function openEnv(env) {
@@ -19,4 +20,8 @@ function waitLoaded(element, timeout = 15000, elementName) {
 
 function waitIsDisplayed(element, timeout = 15000, elementName) {
     return browser.wait(protractor.ExpectedConditions.visibilityOf(element), timeout, `${elementName} didn't become visible within timeout`);
+}
+
+function waitIsNotDisplayed(element, timeout = 15000, elementName) {
+    return browser.wait(protractor.ExpectedConditions.invisibilityOf(element), timeout, `${elementName} didn't become not displayed within timeout`);
 }

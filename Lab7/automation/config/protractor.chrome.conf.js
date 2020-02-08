@@ -19,7 +19,11 @@ const configCurrent = {
     },
 
     specs: [
-        '../specs/cart.js',
+        // '../specs/login.js',
+        // '../specs/cart.js',
+        // '../specs/flowToItem.js',
+        // '../specs/globalSearch.js',
+        '../specs/wishedItem.js',
     ],
 
     maxSessions: 1,
