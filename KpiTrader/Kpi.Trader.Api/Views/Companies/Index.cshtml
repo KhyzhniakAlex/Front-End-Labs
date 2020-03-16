@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Kpi.Trader.Api.Context.Models.Company>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<h1>Utilized JQuery</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                FullName
+            </th>
+            <th>
+                Ticker
+            </th>
+            <th>
+                ModifiedOn
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+</table>
+@section Scripts {
+    <script>
+        $(document).ready(() => {
+            console.log('document-ready');
+            $.get({
+                url: '../../api/companies/',
+                success: (data) => {
+                    $.each(data, (index, item) => {
+                        $('#tableBody').append(`
+                            <tr>
+                                <td>${item.fullName}</td>
+                                <td>${item.ticker}</td>
+                                <td>${item.modifiedOn}</td>
+                                <td>
+                                    <a href="#" onclick="redirectToEdit('${item.id}')">Edit</a>|
+                                    <a href="#" onclick="redirectToDetails('${item.id}')">Details</a>|
+                                    <a href="#" onclick="redirectToDelete('${item.id}')">Delete</a>
+                                </td>
+                            </tr>`);
+                    });
+                    console.log(data);
+                }
+            });
+        });
+        const redirectToList = () => window.location.replace("../../companies");
+        const redirectToEdit = (modelId) => window.location.replace(`../../companies/edit/${modelId}`);
+        const redirectToDetails = (modelId) => window.location.replace(`../../companies/details/${modelId}`);
+        const redirectToDelete = (modelId) => window.location.replace(`../../companies/delete/${modelId}`);
+        const redirectToCreate = () => window.location.replace(`../../companies/create`);
+    </script>
+}

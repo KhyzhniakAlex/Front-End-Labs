@@ -1,0 +1,60 @@
+﻿@model Kpi.Trader.Api.Context.Models.Company
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+            <div class="form-group">
+                <label id="label-FullName" class="control-label">FullName</label>
+                <input id="FullName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label id="label-Ticker" class="control-label">Ticker</label>
+                <input id="Ticker" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label id="label-ModifiedOn" class="control-label">ModifiedOn</label>
+                <input type="datetime-local" id="ModifiedOn" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" onclick="submitform()">Create</button>
+            </div>
+    </div>
+</div>
+
+<div>
+    <a href="#" onclick="redirectToList()">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script>
+        $(document).ready(() => {
+            console.log('document-ready');
+        });
+        const submitform = () => {
+            const company = Object.assign({}, {
+                fullName: $('#FullName').val(),
+                ticker: $('#Ticker').val(),
+                modifiedOn: $('#ModifiedOn').val(),
+            });
+            console.log(company);
+            $.ajax({
+                url: '../../api/companies/',
+                type: "POST",
+                data: JSON.stringify(company),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: redirectToList()
+            });
+            console.log(company);
+        };
+        const redirectToList = () => window.location.replace('../companies');
+</script>
+}

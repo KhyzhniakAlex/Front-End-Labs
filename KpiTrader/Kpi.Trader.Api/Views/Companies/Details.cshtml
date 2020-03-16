@@ -1,0 +1,53 @@
+﻿@model Kpi.Trader.Api.Context.Models.Company
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            FullName
+        </dt>
+        <dd class="col-sm-10" id="model-fullname">
+        </dd>
+        <dt class="col-sm-2">
+            Ticker
+        </dt>
+        <dd class="col-sm-10" id="model-ticker">
+        </dd>
+        <dt class="col-sm-2">
+            ModifiedOn
+        </dt>
+        <dd class="col-sm-10" id="model-modifiedon">
+        </dd>
+    </dl>
+</div>
+<div>
+    <a href="#" onclick="redirectToEdit()">Edit</a> |
+    <a href="#" onclick="redirectToList()">Back to List</a>
+</div>
+
+@section scripts
+{
+    <script>
+        const modelId = "@Model.Id";
+        $(document).ready(() => {
+            console.log('document-ready');
+            $.get({
+                url: '../../api/companies/' + modelId,
+                success: (data) => {
+                    $('#model-fullname').text(data.fullName);
+                    $('#model-ticker').text(data.ticker);
+                    $('#model-modifiedon').text(data.modifiedOn);
+                }
+            });
+        });
+        const redirectToList = () => window.location.replace("../");
+        const redirectToEdit = () => window.location.replace(`../Edit?id=${modelId}`);
+    </script>
+}
