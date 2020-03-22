@@ -176,3 +176,6 @@ C:\Users\Oleksii Tymchenko\source\repos\KpiTrader\Kpi.Trader.Api\obj\Release\net
 C:\Users\Oleksii Tymchenko\source\repos\KpiTrader\Kpi.Trader.Api\obj\Release\netcoreapp3.1\Kpi.Trader.Api.csproj.CopyComplete
 C:\Users\Oleksii Tymchenko\source\repos\KpiTrader\Kpi.Trader.Api\obj\Release\netcoreapp3.1\Kpi.Trader.Api.dll
 C:\Users\Oleksii Tymchenko\source\repos\KpiTrader\Kpi.Trader.Api\obj\Release\netcoreapp3.1\Kpi.Trader.Api.pdb
+C:\Users\Oleksii Tymchenko\source\repos\KpiTrader\Kpi.Trader.Api\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Oleksii Tymchenko\source\repos\KpiTrader\Kpi.Trader.Api\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Oleksii Tymchenko\source\repos\KpiTrader\Kpi.Trader.Api\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll

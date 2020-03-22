@@ -25,14 +25,22 @@ namespace Kpi.Trader.Api.ApiControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Stock>>> GetStocks()
         {
-            return await _context.Stocks.ToListAsync();
+            return await _context
+                .Stocks
+                .Include(x=>x.Company)
+                .Include(x=>x.Holder)
+                .ToListAsync();
         }
 
         // GET: api/Stocks/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Stock>> GetStock(Guid id)
         {
-            var stock = await _context.Stocks.FindAsync(id);
+            var stock = await _context
+                .Stocks
+                .Include(x => x.Company)
+                .Include(x => x.Holder)
+                .FirstOrDefaultAsync(x=>x.Id==id);
 
             if (stock == null)
             {

@@ -30,7 +30,9 @@ namespace Kpi.Trader.Api
                         .AllowAnyHeader());
             });
             services.AddAntiforgery(o => o.SuppressXFrameOptionsHeader = true);
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Serialize);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
